@@ -55,6 +55,9 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.11.0")
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.3.2")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.3.2")
+    implementation ("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
