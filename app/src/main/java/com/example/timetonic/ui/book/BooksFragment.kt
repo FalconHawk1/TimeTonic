@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.timetonic.databinding.FragmentBooksBinding
+import com.example.timetonic.ui.book.BooksFragmentArgs
 import com.example.timetonic.ui.book.adapter.BookAdapter
 
 class BooksFragment : Fragment() {
@@ -28,11 +29,13 @@ class BooksFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val sesskey = args.sesskey
+
         binding.booksRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         viewModel.books.observe(viewLifecycleOwner) { books ->
             binding.booksRecyclerView.adapter = BookAdapter(books)
         }
 
-        viewModel.fetchBooks(args.sesskey)
+        viewModel.fetchBooks(sesskey)
     }
 }
