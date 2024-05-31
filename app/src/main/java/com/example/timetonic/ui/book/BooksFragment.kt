@@ -9,7 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.timetonic.databinding.FragmentBooksBinding
-import com.example.timetonic.ui.book.BooksFragmentArgs
 import com.example.timetonic.ui.book.adapter.BookAdapter
 
 class BooksFragment : Fragment() {

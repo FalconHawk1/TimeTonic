@@ -14,9 +14,6 @@
             app:destination="@id/booksFragment"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true">
-            <argument
-                android:name="sesskey"
-                app:argType="string" />
         </action>
     </fragment>
 
@@ -24,5 +21,9 @@
         android:id="@+id/booksFragment"
         android:name="com.example.timetonic.ui.book.BooksFragment"
         android:label="Books"
-        tools:layout="@layout/fragment_books"/>
+        tools:layout="@layout/fragment_books">
+        <argument
+            android:name="sesskey"
+            app:argType="string" />
+    </fragment>
 </navigation>
