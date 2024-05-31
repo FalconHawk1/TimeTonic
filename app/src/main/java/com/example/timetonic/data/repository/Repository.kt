@@ -1,6 +1,7 @@
 package com.example.timetonic.data.repository
 
 import com.example.timetonic.data.api.ApiClient
+import com.example.timetonic.data.model.AppkeyResponse
 import com.example.timetonic.data.model.AuthResponse
 import com.example.timetonic.data.model.BooksResponse
 import com.example.timetonic.data.model.SesskeyResponse
@@ -8,6 +9,10 @@ import com.example.timetonic.data.model.SesskeyResponse
 class Repository {
 
     private val apiService = ApiClient.apiService
+
+    suspend fun createAppkey(version: String, req: String, appname: String): AppkeyResponse {
+        return apiService.createAppKey(version, req, appname)
+    }
 
     suspend fun createOauthkey(version: String, req: String, login: String, pwd: String, appkey: String): AuthResponse {
         return apiService.createOauthkey(version, req, login, pwd, appkey)

@@ -30,7 +30,7 @@ class LoginFragment : Fragment() {
         binding.loginButton.setOnClickListener {
             val email = binding.email.text.toString()
             val password = binding.password.text.toString()
-            val appKey = "ntG4-I4hM-c4MM-9nX5-mf3f-J6yg-qUe4"
+            val appKey = "TRfC-d44Z-uru3-7YrT-hiEh-XJau-t5rC"
 
             viewModel.authenticate(email, password, appKey, { sesskey ->
                 Navigation.findNavController(view).navigate(LoginFragmentDirections.actionLoginFragmentToBooksFragment(sesskey))

@@ -1,5 +1,6 @@
 package com.example.timetonic.data.api
 
+import com.example.timetonic.data.model.AppkeyResponse
 import com.example.timetonic.data.model.AuthResponse
 import com.example.timetonic.data.model.BooksResponse
 import com.example.timetonic.data.model.SesskeyResponse
@@ -8,6 +9,14 @@ import retrofit2.http.Field
 import retrofit2.http.POST
 
 interface ApiService {
+
+    @FormUrlEncoded
+    @POST("api.php")
+    suspend fun createAppKey(
+        @Field("version") version: String,
+        @Field("req") req: String,
+        @Field("appname") appname: String
+    ): AppkeyResponse
 
     @FormUrlEncoded
     @POST("api.php")
